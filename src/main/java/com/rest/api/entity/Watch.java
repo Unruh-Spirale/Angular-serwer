@@ -19,18 +19,25 @@ public class Watch {
     @Column
     private String movementModel;
     @Column
-    private double price;
+    private String toRepair;
+    @Column
+    private String deadline;
+    @Column
+    private double cost;
 
     public Watch() {
     }
 
-    public Watch(String company, String country, String model, String movement, String movementModel, double price) {
+    public Watch(String company, String country, String model, String movement, String movementModel,
+                 String toRepair, String deadline, double cost) {
         this.company = company;
         this.country = country;
         this.model = model;
         this.movement = movement;
         this.movementModel = movementModel;
-        this.price = price;
+        this.toRepair = toRepair;
+        this.deadline = deadline;
+        this.cost = cost;
     }
 
     public Long getIdWatch() {
@@ -81,11 +88,27 @@ public class Watch {
         this.movementModel = movementModel;
     }
 
-    public double getPrice() {
-        return price;
+    public String getToRepair() {
+        return toRepair;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setToRepair(String toRepair) {
+        this.toRepair = toRepair;
+    }
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(String deadline) {
+        this.deadline = deadline;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setCost(double price) {
+        this.cost = price;
     }
 }

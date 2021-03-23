@@ -49,7 +49,9 @@ public class WatchServiceImpl implements WatchService {
         watch.setModel(updateWatch.getModel());
         watch.setMovement(updateWatch.getMovement());
         watch.setMovementModel(updateWatch.getMovementModel());
-        watch.setPrice(updateWatch.getPrice());
+        watch.setToRepair(updateWatch.getToRepair());
+        watch.setDeadline(updateWatch.getDeadline());
+        watch.setCost(updateWatch.getCost());
 
         watchRepository.save(watch);
     }
